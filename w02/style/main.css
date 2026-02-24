@@ -1,0 +1,36 @@
+/* h1 {
+font-size:100px;
+font-weight:bold;
+font-family:'helvetica';
+}
+
+h3 {
+
+}
+
+p {
+    font-family: helvetica;
+    color:darkmagenta
+} */
+
+body {
+font-size: 21px;
+
+}
+.q_and_a {
+    width:900px;
+    margin:auto;
+    font-family:"helvetica";
+}
+
+.question {
+    font-weight:bold;
+    /* text-transform:uppercase; */
+    color:cornflowerblue;
+}
+
+.answer {
+    font-weight:normal;
+    text-transform:normal;
+    color:darkslateblue;
+}
