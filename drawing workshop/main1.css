@@ -1,0 +1,24 @@
+.square {
+
+     background-color:antiquewhite;
+     width:500px;
+     height:500px
+
+}
+
+
+
+
+
+/*.triangle {
+    min-height:400px;
+    background:red;
+    grid-column:span 2;
+}
+
+.kite {
+    background:blue;
+    width:300px;
+    height:300px;
+    border:1px solid red;
+}
