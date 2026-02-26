@@ -16,7 +16,7 @@
   left:0px;
   top:0px;
   background: #D64D1B;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 30px;
   width: 100%;
   height: 150px;
@@ -30,15 +30,14 @@
   left: 0px;
   bottom: 0px;
   background: #D64D1B;
-  color: white;
-  font-size: 16px;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
   font-family: 'Courier New', Courier, monospace;
   width: 100%;
   height: 120px;
-  text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
 }
   
 .navbar {
@@ -52,51 +51,37 @@
     max-width: 600px;           
     display: flex;
     justify-content: center;
-     position: absolute;
-         top: 5%;
-         left: 50%;
-         transform: translate(-50%, -50%);
+     position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
        
 }
 
 /* Style the links inside the navigation bar */
 .navbar a {
     flex: 1 0 auto;
-  color: #f2f2f2;
+  color: #000000;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 16px;
+  font-family: 'Poppins', sans-serif;
 
 }
 
-/* Change the color of links on hover */
+/*the color of links on hover */
 .navbar a:hover {
-  background-color: #ddd;
+  background-color: #b53507a0;
   color: rgb(0, 0, 0);
 }
 
-/* Add a color to the active/current link */
+/* color of the active/current link */
 .navbar a.active {
-  background-color: #aa7804;
-  color: white;
+  background-color: #ff4400a0;
+  color: rgb(0, 0, 0);
 }
 
-
-
-  
-/* .navbar{  
-    /* position:fixed;
-    top:157px;
-    left:690px;
-    width: 200px;
-    height: 70px;
-    border-radius: 25px;
-    grid-column:span 4;
-    background: #d64d1b68;
-    font-family:'Inter', sans-serif;
-    text-align: center;
-    font-size: 16px; */
 
 /* .blurb{
 font-family: 'Courier New', monospace;
