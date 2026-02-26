@@ -1,23 +1,114 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
+
+.container {
+
+     background:rgba(0,255,0,0,0.2);
+     width:1200px;
+     margin:auto;
+    display:grid;
+    grid-template-columns:25% 25% 25% 25%;
+
+}
+
 .header {
+  position: fixed;
+  left:0px;
+  top:0px;
   background: #D64D1B;
   color: white;
   font-size: 30px;
   width: 100%;
-  height: 100px;
+  height: 150px;
   text-align: center;
+  text-decoration-line: underline;
   font-family: 'Do Hyeon', sans-serif;
 }
 
-p {
-  font-family: 'Do Hyeon', sans-serif;
+.footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  background: #D64D1B;
+  color: white;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  width: 100%;
+  height: 120px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+  
+.navbar {
+  background-color: #d64d1b68;
+  overflow: hidden;
+    width: 200px;
+    height: 70px;
+    border-radius: 25px;
+    margin: 157px auto 0;          
+    width: 90%;                    
+    max-width: 600px;           
+    display: flex;
+    justify-content: center;
+     position: absolute;
+         top: 5%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+       
 }
 
-.navbar{
-
-width: 100px;
-height: 100px;
-background-color:#DD64D1B;
+/* Style the links inside the navigation bar */
+.navbar a {
+    flex: 1 0 auto;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
 
 }
+
+/* Change the color of links on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: rgb(0, 0, 0);
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+  background-color: #aa7804;
+  color: white;
+}
+
+
+
+  
+/* .navbar{  
+    /* position:fixed;
+    top:157px;
+    left:690px;
+    width: 200px;
+    height: 70px;
+    border-radius: 25px;
+    grid-column:span 4;
+    background: #d64d1b68;
+    font-family:'Inter', sans-serif;
+    text-align: center;
+    font-size: 16px; */
+
+/* .blurb{
+font-family: 'Courier New', monospace;
+text-align: center;
+color: #000000;
+height:-20px;
+} */
+
+
+/* .square {
+    background:blue;
+    width:300px;
+    height:300px;
+    border:1px solid rgb(168, 113, 113);
+} */
