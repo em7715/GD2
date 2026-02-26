@@ -1,24 +1,46 @@
 .square {
-
+    position:relative;
      background-color:antiquewhite;
-     width:500px;
-     height:500px
+     width:750px;
+     height:750px;
+     border-color: rgb(210, 203, 203);
+     border-width:30px;
+     transform: translate(50%, 10%);
+     overflow: hidden;
 
 }
 
 
 
+.diamond {
+     position:absolute;
+     z-index: 23;
+     border-radius: 15px;
+     background-color:rgb(252, 181, 80);
+     width:400px;
+     height:400px;
+     top: 47%;
+    left: 36%;
+    transform: translate(-25%, -12%) rotate(45deg);
+    
+    }
 
 
-/*.triangle {
-    min-height:400px;
-    background:red;
-    grid-column:span 2;
-}
 
-.kite {
-    background:blue;
-    width:300px;
-    height:300px;
-    border:1px solid red;
-}
+.triangle {
+    position:absolute;
+    z-index: 24;
+    top: 26%;
+    left: 34%;
+       width: 0px;
+      height: 0px;
+      border-left: 200px solid transparent;
+      border-right: 200px solid transparent;
+      border-top: 200px solid rgb(252, 181, 80);
+    
+    
+    }
+  
+    
+
+
