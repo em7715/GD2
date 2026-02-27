@@ -2,7 +2,6 @@
 
 
 .container {
-
      background:rgba(0,255,0,0,0.2);
      width:1200px;
      margin:auto;
@@ -39,7 +38,7 @@
   align-items: center;
   justify-content: right;
 }
-  
+
 .navbar {
   background-color: #d64d1b68;
   overflow: hidden;
@@ -67,7 +66,6 @@
   text-decoration: underline;
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
-
 }
 
 /*the color of links on hover */
@@ -83,9 +81,9 @@
 }
 
 .hero-image {
-    display: block;          /* make it a block-level element */
-    margin: 0 auto;          /* auto‑left/right margins centre it */
-    max-width: 50%;          /* or whatever size you want */
+    display: block;          
+    margin: 0 auto;          
+    max-width: 50%;         
 }
 
 /* .blurb{
