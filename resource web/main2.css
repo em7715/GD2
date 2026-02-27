@@ -20,7 +20,7 @@
   font-size: 30px;
   width: 100%;
   height: 150px;
-  text-align: center;
+  /* text-align: center; */
   text-decoration-line: underline;
   font-family: 'Do Hyeon', sans-serif;
 }
@@ -44,9 +44,9 @@
   background-color: #d64d1b68;
   overflow: hidden;
     width: 200px;
-    height: 70px;
+    height: 40px;
     border-radius: 25px;
-    margin: 157px auto 0;          
+    margin: 140px auto 0;          
     width: 90%;                    
     max-width: 600px;           
     display: flex;
@@ -64,7 +64,7 @@
   color: #000000;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
+  text-decoration: underline;
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
 
@@ -82,6 +82,11 @@
   color: rgb(0, 0, 0);
 }
 
+.hero-image {
+    display: block;          /* make it a block-level element */
+    margin: 0 auto;          /* auto‑left/right margins centre it */
+    max-width: 50%;          /* or whatever size you want */
+}
 
 /* .blurb{
 font-family: 'Courier New', monospace;
