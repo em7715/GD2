@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FILM FOR ALL</title>
+        <link rel="stylesheet" href="global.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"/>
+        <link rel="stylesheet" href="postervariations.css"/>
+        <link rel="stylesheet" href="postersCSS.css"/>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="home.html">Home</a>
+            <a class="active" href="posters.html">Posters</a>
+            <a href="discover.html">Discover</a>
+        </div>
+    <div class="container">
+            <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
+
+<div class="row album-thumbs">
+    <div class="column carousel-cell">
+        <img src="images/OGs/cleo french.jpg" alt="Cleo from 5 to 7 French poster" data-sidebar-title="Original (France)" data-sidebar-text="The original French poster." style="width:100%">
+    </div>
+    <div class="column carousel-cell">
+        <img src="images/Variants/cleo us.jpg" alt="Cleo from 5 to 7 US poster" data-sidebar-title="United States" data-sidebar-text="The US variant." style="width:100%">
+    </div>
+</div>
+
+        <div class="movie-title">Cléo from 5 to 7 (1962)</div>
+
+        <aside id="posterSidebar" class="poster-sidebar" aria-live="polite">
+            <h2 id="posterSidebarTitle">Poster details</h2>
+            <p id="posterSidebarText">Hover over a poster to see notes here.</p>
+        </aside>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script>
+            $(function () {
+                $('.album-thumbs').flickity({ wrapAround: true, pageDots: false });
+                var $sidebar = $('#posterSidebar');
+                var $sidebarTitle = $('#posterSidebarTitle');
+                var $sidebarText = $('#posterSidebarText');
+                $('.album-thumbs img').on('mouseenter', function () {
+                    $sidebarTitle.text($(this).attr('data-sidebar-title') || 'Poster details');
+                    $sidebarText.text($(this).attr('data-sidebar-text') || '');
+                    $sidebar.addClass('is-visible');
+                });
+                $('.album-thumbs').on('mouseleave', function () { $sidebar.removeClass('is-visible'); });
+                $('.flickity-button').on('mouseenter', function () { $sidebar.removeClass('is-visible'); });
+            });
+        </script>
+    </body>
+</html>

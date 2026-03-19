@@ -16,10 +16,15 @@ body {
     grid-template-columns:25% 25% 25% 25%;
 }
 
+/* Header link wrapper — transparent to grid layout */
+a:has(> .header) {
+  display: contents;
+}
+
 .header {
   position: fixed;
-  left:0px;
-  top:0px;
+  left: 0px;
+  top: 0px;
   background: #D64D1B;
   color: rgb(255, 255, 255);
   font-size: 30px;
@@ -114,6 +119,17 @@ body {
 }
 
 .discovertitle {
+    grid-column: 1 / 5;
+    font-family: 'Courier New', monospace;
+    color: #D64D1B;
+    margin-top: 10px;
+    font-size: 30px;
+    text-align: center;
+   font-weight: bold;
+}
+
+.postertitle {
+    grid-column: 1 / 5;
     font-family: 'Courier New', monospace;
     color: #D64D1B;
     margin-top: 10px;
@@ -139,17 +155,59 @@ body {
     max-width: 50%;         
 }
 
-/* .blurb{
-font-family: 'Courier New', monospace;
-text-align: center;
-color: #000000;
-height:-20px;
-} */
+.random-poster-section {
+    grid-column: 1 / 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    gap: 12px;
+}
 
-/* 
-.square {
-    background:blue;
-    width:300px;
-    height:300px;
-    border:1px solid rgb(168, 113, 113);
-}  */
+.random-poster-label {
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    color: #888;
+    margin: 0;
+    letter-spacing: 0.05em;
+}
+
+.random-poster-section img {
+    max-height: 60vh;
+    max-width: 80%;
+    object-fit: contain;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    border-radius: 4px;
+}
+
+  #random-poster-link {
+    display: contents;
+  }
+
+  #random-poster-link img {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  #random-poster-link:hover img {
+    transform: scale(1.03);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+  }
+
+.random-poster-caption {
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 24px;
+    color: #D64D1B;
+    margin: 0;
+}
+
+.random-poster-hint {
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: #D64D1B;
+     grid-column: 1 / 5;
+    font-size: 20px;
+    text-align: center;
+
+}
+

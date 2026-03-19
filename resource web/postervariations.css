@@ -1,0 +1,94 @@
+/* poster variations view */
+
+/* .caption {
+    font-family: 'Courier New', Courier, monospace; /* choose desired font */
+    /* color: #000000;           
+    margin-top: 5px;
+}  */
+
+
+
+.album-thumbs{
+    grid-column: 1 / 4;
+    grid-row: 1;
+    width: 100%;
+    max-width: 800px;
+    margin-left: min(0px, calc((100vw - 1200px) / -2 + 60px));
+    margin-top: 40px;
+    overflow-x: clip;
+    overflow-y: visible;
+}
+
+.album-thumbs .flickity-viewport {
+    overflow: visible;
+}
+
+.album-thumbs .carousel-cell {
+    width: 55%;
+    margin-right: 16px;
+    overflow: visible;
+    position: relative;
+}
+
+.album-thumbs .carousel-cell img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-origin: center center;
+}
+
+
+
+/* zoom image on hover */
+.album-thumbs .carousel-cell img:hover {
+    transform: scale(1.05);   
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* cast shadow */
+    position: relative;
+    z-index: 2;
+ }
+
+.movie-title {
+    grid-column: 4/ 5;
+    grid-row: 1;
+    align-self: start;
+    margin-top: 56px;
+    margin-left: 10px;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 48px;
+    color: #D64D1B;
+}
+
+.poster-sidebar {
+    grid-column: 4 / 5;
+    /* grid-row: 1; */
+    width: 100%;
+    max-height: 150px;
+    padding: 10px;
+    /* margin-top: 0;
+    margin-left: 10px; */
+    border-radius: 10px;
+    background:  #f19472;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease;
+    z-index: 1100;
+    overflow: hidden;
+}
+
+.poster-sidebar.is-visible {
+    opacity: 1;
+    visibility: visible;  
+}
+
+.poster-sidebar h2 {
+    margin: 0 0 6px;
+    font-size: 16px;
+}
+
+.poster-sidebar p {
+    margin: 0;
+    line-height: 1.2;
+    font-size: 13px;
+}

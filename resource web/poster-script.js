@@ -16,19 +16,12 @@ $(function () {
   });
 });
 
+// Flickity carousel
+$(".album-thumbs").flickity({
+    wrapAround: true,
+    pageDots: false
+})
 
-
-
-// $("#filters-button-group2").click(function(){
-                
-
-
-// $("#preamble-btn-2").click(function(){
-//     $("#preamble-btn-1").css({
-//         "background":"red",
-//         "rotate":"45deg",
-//     })
-// })
 
 
 // 

@@ -5,12 +5,12 @@
          <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FILM FOR ALL</title>
         <link rel="stylesheet" href="global.css"/>
-        <!-- <link rel="stylesheet" href="main2.css"/> -->
+
     </head>
     <body>
 
     <div class="container">
-            <div class="header"> <h1>FILM FOR ALL</h1> </div>
+            <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
 
                <div class="navbar">
                 <a href="home.html">Home</a>
@@ -20,13 +20,71 @@
             </div>
             
             <div class="discovertitle"><p>Discover</p></div>
+             <p class="random-poster-hint">Reload the page to discover another <br>
+                poster and click on it to learn more.</p>
 
+
+            <div class="random-poster-section">
+                <a id="random-poster-link" href="">
+                    <img id="random-poster" src="" alt="Random film poster">
+                </a>
+                <p id="random-poster-caption" class="random-poster-caption"></p>
+            </div>
+
+            <!-- make footer formatted like movie credits -->
             <!-- <div class="footer"> <p>Designed by Emma Burke</p> </div> -->
 
-        
-           
         </div>
 
+    <script>
+        const posters = [
+            { src: 'images/OGs/aliens og.jpg',               title: 'Aliens',            country: 'US',             page: 'aliens-posters.html' },
+            { src: 'images/OGs/amelie-og.jpg',               title: 'Amélie',            country: 'France',         page: 'amelie-posters.html' },
+            { src: 'images/OGs/apacolypse now us.jpg',        title: 'Apocalypse Now',    country: 'US',             page: 'apocalypse-posters.html' },
+            { src: 'images/OGs/black panther OG.jpg',         title: 'Black Panther',     country: 'US',             page: 'blackpanther-posters.html' },
+            { src: 'images/OGs/carrie us.jpg',                title: 'Carrie',            country: 'US',             page: 'carrie-posters.html' },
+            { src: 'images/OGs/cleo french.jpg',              title: 'Cléo from 5 to 7', country: 'France',         page: 'cleo-posters.html' },
+            { src: 'images/OGs/doctor-strange-us.jpg',        title: 'Doctor Strange',    country: 'US',             page: 'doctorstrange-posters.html' },
+            { src: 'images/OGs/ET us.jpg',                    title: 'E.T.',              country: 'US',             page: 'et-posters.html' },
+            { src: 'images/OGs/fatal attraction og.jpg',      title: 'Fatal Attraction',  country: 'US',             page: 'fatalattraction-posters.html' },
+            { src: 'images/OGs/force awakens OG.jpg',         title: 'The Force Awakens', country: 'US',             page: 'forceawakens-posters.html' },
+            { src: 'images/OGs/jaws us.jpg',                  title: 'Jaws',              country: 'US',             page: 'jaws-posters.html' },
+            { src: 'images/OGs/jurassic park us.jpeg',        title: 'Jurassic Park',     country: 'US',             page: 'jurassicpark-posters.html' },
+            { src: 'images/OGs/psycho us.jpg',                title: 'Psycho',            country: 'US',             page: 'psycho-posters.html' },
+            { src: 'images/OGs/pulp fiction us.jpg',          title: 'Pulp Fiction',      country: 'US',             page: 'pulpfiction-posters.html' },
+            { src: 'images/OGs/run lola run german.jpg',      title: 'Run Lola Run',      country: 'Germany',        page: 'runlolarun-posters.html' },
+            { src: 'images/OGs/spirited away japan.jpeg',     title: 'Spirited Away',     country: 'Japan',          page: 'spiritedaway-posters.html' },
+            { src: 'images/OGs/the godfather us.jpeg',        title: 'The Godfather',     country: 'US',             page: 'godfather-posters.html' },
+            { src: 'images/OGs/venom-us.jpg',                 title: 'Venom',             country: 'US',             page: 'venomposters.html' },
+            { src: 'images/OGs/vertigo og.jpg',               title: 'Vertigo',           country: 'US',             page: 'vertigo-posters.html' },
+            { src: 'images/Variants/aliens polish.jpg',        title: 'Aliens',            country: 'Poland',         page: 'aliens-posters.html' },
+            { src: 'images/Variants/amelie-japanese.jpeg',     title: 'Amélie',            country: 'Japan',          page: 'amelie-posters.html' },
+            { src: 'images/Variants/amelie-us.jpeg',           title: 'Amélie',            country: 'US',             page: 'amelie-posters.html' },
+            { src: 'images/Variants/apacolypse now polish.jpg',title: 'Apocalypse Now',    country: 'Poland',         page: 'apocalypse-posters.html' },
+            { src: 'images/Variants/black panther china.jpg',  title: 'Black Panther',     country: 'China',          page: 'blackpanther-posters.html' },
+            { src: 'images/Variants/carrie france.jpg',        title: 'Carrie',            country: 'France',         page: 'carrie-posters.html' },
+            { src: 'images/Variants/cleo us.jpg',              title: 'Cléo from 5 to 7', country: 'US',             page: 'cleo-posters.html' },
+            { src: 'images/Variants/doctor-strange-italy.jpg', title: 'Doctor Strange',    country: 'Italy',          page: 'doctorstrange-posters.html' },
+            { src: 'images/Variants/ET ghana.jpg',             title: 'E.T.',              country: 'Ghana',          page: 'et-posters.html' },
+            { src: 'images/Variants/fatal attraction polish.jpg',title:'Fatal Attraction',  country: 'Poland',         page: 'fatalattraction-posters.html' },
+            { src: 'images/Variants/force awakens china.jpg',  title: 'The Force Awakens', country: 'China',          page: 'forceawakens-posters.html' },
+            { src: 'images/Variants/jaws czech.jpg',           title: 'Jaws',              country: 'Czech Republic', page: 'jaws-posters.html' },
+            { src: 'images/Variants/jurassic park ghana.jpg',  title: 'Jurassic Park',     country: 'Ghana',          page: 'jurassicpark-posters.html' },
+            { src: 'images/Variants/psycho italy.jpg',         title: 'Psycho',            country: 'Italy',          page: 'psycho-posters.html' },
+            { src: 'images/Variants/pulp fiction japan.jpg',   title: 'Pulp Fiction',      country: 'Japan',          page: 'pulpfiction-posters.html' },
+            { src: 'images/Variants/run lola run us.jpg',      title: 'Run Lola Run',      country: 'US',             page: 'runlolarun-posters.html' },
+            { src: 'images/Variants/spirited away french.jpg', title: 'Spirited Away',     country: 'France',         page: 'spiritedaway-posters.html' },
+            { src: 'images/Variants/the godfather cuba.jpg',   title: 'The Godfather',     country: 'Cuba',           page: 'godfather-posters.html' },
+            { src: 'images/Variants/venom china.jpg',          title: 'Venom',             country: 'China',          page: 'venomposters.html' },
+            { src: 'images/Variants/vertigo polish.jpg',       title: 'Vertigo',           country: 'Poland',         page: 'vertigo-posters.html' }
+        ];
+
+        const pick = posters[Math.floor(Math.random() * posters.length)];
+        document.getElementById('random-poster').src = pick.src;
+        document.getElementById('random-poster').alt = pick.title + ' — ' + pick.country + ' poster';
+        document.getElementById('random-poster-caption').textContent = pick.title + ' — ' + pick.country;
+        document.getElementById('random-poster-link').href = pick.page;
+    </script>
 
     </body>
 </html>
