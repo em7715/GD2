@@ -23,7 +23,7 @@
             <!-- <div class="footer"> <p>Designed by Emma Burke  </p> </div> -->
 
 
-            <div class="row">
+            <!-- <div class="row">
             <div class="column">
                 <a href="amelie-posters.html">
                 <img src="images/amelie-og.jpg" alt="Amelie's French poster" style="width:100%">
@@ -105,8 +105,103 @@
             </div>
 
            
+        </div> -->
+
+<!-- Isotope filter -->
+    <div class="film-filters">
+        <button class="is-checked" data-filter="*">Show all</button>
+
+        <div class="filter-group">
+            <button type="button" class="filter-parent">Genre</button>
+            <div class="filter-submenu">
+                <button data-filter=".genre-action-adventure">Action/Adventure</button>
+                <button data-filter=".genre-scifi-fantasy">Sci-Fi/Fantasy</button>
+                <button data-filter=".genre-comedy">Comedy</button>
+                <button data-filter=".genre-romance">Romance</button>
+                <button data-filter=".genre-animation">Animation</button>
+                <button data-filter=".genre-crime-drama-thriller-mystery">Crime/Drama/Thriller/Mystery</button>
+                <button data-filter=".genre-horror">Horror</button>
+            </div>
         </div>
 
+        <div class="filter-group">
+            <button type="button" class="filter-parent">Decade</button>
+            <div class="filter-submenu">
+                <button data-filter=".decade-1950s">1950s</button>
+                <button data-filter=".decade-1960s">1960s</button>
+                <button data-filter=".decade-1970s">1970s</button>
+                <button data-filter=".decade-1980s">1980s</button>
+                <button data-filter=".decade-1990s">1990s</button>
+                <button data-filter=".decade-2000s">2000s</button>
+                <button data-filter=".decade-2010s">2010s</button>
+                <button data-filter=".decade-2020s">2020s</button>
+            </div>
+        </div>
+    </div>
 
+    <div class="grid">
+        <div class="grid-item amelie genre-romance genre-comedy decade-2000s">
+            <img src="images/OGs/amelie-og.jpg" alt="Amelie French poster">
+        </div>
+        <div class="grid-item venom genre-action-adventure decade-2010s">
+            <img src="images/OGs/venom-us.jpg" alt="Venom US poster">
+        </div>
+        <div class="grid-item aliens genre-scifi-fantasy genre-action-adventure decade-1980s">
+            <img src="images/OGs/aliens og.jpg" alt="Aliens US poster">
+        </div>
+        <div class="grid-item apocalypse genre-crime-drama-thriller-mystery decade-1970s">
+            <img src="images/OGs/apacolypse now us.jpg" alt="Apocalypse Now US poster">
+        </div>
+        <div class="grid-item black-panther genre-action-adventure genre-scifi-fantasy decade-2010s">
+            <img src="images/OGs/black panther OG.jpg" alt="Black Panther US poster">
+        </div>
+        <div class="grid-item carrie genre-horror decade-1970s">
+            <img src="images/OGs/carrie us.jpg" alt="Carrie US poster">
+        </div>
+        <div class="grid-item cleo genre-romance genre-comedy decade-1960s">
+            <img src="images/OGs/cleo french.jpg" alt="Cleo French poster">
+        </div>
+        <div class="grid-item doctor-strange genre-action-adventure genre-scifi-fantasy decade-2020s">
+            <img src="images/OGs/doctor-strange-us.jpg" alt="Doctor Strange US poster">
+        </div>
+        <div class="grid-item et genre-scifi-fantasy genre-action-adventuredecade-1980s">
+            <img src="images/OGs/ET us.jpg" alt="E.T. US poster">
+        </div>
+        <div class="grid-item fatal-attraction genre-crime-drama-thriller-mystery decade-1980s">
+            <img src="images/OGs/fatal attraction og.jpg" alt="Fatal Attraction US poster">
+        </div>
+        <div class="grid-item force-awakens genre-scifi-fantasy genre-action-adventure decade-2010s">
+            <img src="images/OGs/force awakens OG.jpg" alt="Force Awakens US poster">
+        </div>
+        <div class="grid-item jaws genre-horror genre-action-adventuredecade-1970s">
+            <img src="images/OGs/jaws us.jpg" alt="Jaws US poster">
+        </div>
+        <div class="grid-item jurassic-park genre-action-adventure decade-1990s">
+            <img src="images/OGs/jurassic park us.jpeg" alt="Jurassic Park US poster">
+        </div>
+        <div class="grid-item psycho genre-horror genre-crime-drama-thriller-mystery decade-1960s">
+            <img src="images/OGs/psycho us.jpg" alt="Psycho US poster">
+        </div>
+        <div class="grid-item pulp-fiction genre-crime-drama-thriller-mystery decade-1990s">
+            <img src="images/OGs/pulp fiction us.jpg" alt="Pulp Fiction US poster">
+        </div>
+        <div class="grid-item run-lola-run genre-crime-drama-thriller-mystery genre-action-adventure decade-1990s">
+            <img src="images/OGs/run lola run german.jpg" alt="Run Lola Run German poster">
+        </div>
+        <div class="grid-item spirited-away genre-action-adventure genre-animation decade-2000s">
+            <img src="images/OGs/spirited away japan.jpeg" alt="Spirited Away Japan poster">
+        </div>
+        <div class="grid-item godfather genre-crime-drama-thriller-mystery decade-1970s">
+            <img src="images/OGs/the godfather us.jpeg" alt="The Godfather US poster">
+        </div>
+        <div class="grid-item vertigo genre-romance genre-crime-drama-thriller-mystery decade-1950s">
+            <img src="images/OGs/vertigo og.jpg" alt="Vertigo US poster">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+		<!-- jquery comes first before Isotope and the custom script -->
+               <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+              <script src="poster-script.js"></script>
     </body>
 </html>
