@@ -1,0 +1,72 @@
+
+
+
+
+/*
+
+position:absoute;
+top
+left
+z-index
+
+*/
+
+.square {
+    width:800px;
+    height:800px;
+    border:1px solid rgb(0, 0, 0);
+    position:absolute;
+    overflow:hidden;
+}
+
+
+    .square_interior_1{
+        background:black;
+        width:400px;
+        height:400px;
+        position:absolute;
+        top:0;
+        left:0;
+    }
+
+    .square_interior_2 {
+         background:black;
+        width:400px;
+        height:600px;
+        position:absolute;
+        top:200px;
+        right:0;
+    }
+
+    .green_oval_1 {
+
+        position:absolute;
+     width: 450px;
+      height: 500px;
+      top:200px;
+      left:-100px;
+      background: rgb(4, 156, 126);
+      border-top-left-radius: 250px;
+      border-top-right-radius: 200px;
+      border-bottom-left-radius: 250px;
+      border-bottom-right-radius: 250px;   
+  
+    }
+
+
+    .green_oval_2 {
+
+position: absolute;
+  width: 600px;
+  height: 600px;
+  top: -80px;
+  left: 300px;
+  background: rgb(4, 156, 126);
+  border-top-left-radius: 400px;
+  border-top-right-radius: 300px;
+  border-bottom-left-radius: 400px;
+  border-bottom-right-radius: 400px;
+  transform: rotate(190deg); 
+  
+    }
+

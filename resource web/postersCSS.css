@@ -143,15 +143,18 @@
     width: 275px;
     margin: 1%;
     margin-top: 50px;
+    aspect-ratio: 2 / 3;
 }
 
 .grid-item img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     margin: 0 auto;          
     cursor: pointer;
     transition: transform 0.3s ease;
+    object-fit: contain;
+    background: #ffffff;
 }
 
 

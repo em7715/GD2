@@ -4,8 +4,8 @@
 
 body {
   margin: 0;
-  padding-top: 180px;
-  padding-bottom: 120px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .container {
@@ -16,19 +16,27 @@ body {
     grid-template-columns:25% 25% 25% 25%;
 }
 
-/* Header link wrapper — transparent to grid layout */
+/* Header link wrapper */
 a:has(> .header) {
-  display: contents;
+  grid-column: 1 / 5;
+  grid-row: 1;
+  display: block;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  text-decoration: none;
 }
 
 .header {
-  position: fixed;
-  left: 0px;
-  top: 0px;
+  grid-column: 1 / 5;
+  position: static;
+  top: auto;
+  left: auto;
   background: #D64D1B;
   color: rgb(255, 255, 255);
   font-size: 30px;
-  width: 100%;
+  width: 100vw;
+  max-width: 100vw;
   height: 100px;
   z-index: 900;
   display: flex;
@@ -41,6 +49,29 @@ a:has(> .header) {
 
 .header h1 {
   margin: 20px;
+}
+
+.site-footer {
+  grid-column: 1 / 5;
+  position: static;
+  width: 100vw;
+  max-width: 100vw;
+  min-height: 100px;
+  margin-top: 60px;
+  margin-left: calc(50% - 50vw);
+  background: #D64D1B;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  font-family: 'Do Hyeon', sans-serif;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 24px;
 }
 
 /* .footer {
@@ -62,19 +93,20 @@ a:has(> .header) {
 .navbar {
   background-color: #f19472;
   overflow: hidden;
-    width: 200px;
-    height: 40px;
-    border-radius: 25px;
-    margin: 140px auto 0;          
-    width: 90%;                    
-    max-width: 600px;           
-    display: flex;
-    justify-content: center;
-     position: fixed;
-    z-index: 1000;
-    top: 5px;
-    left: 50%;
-    transform: translateX(-50%);
+  grid-column: 1 / 5;
+  grid-row: 2;
+  height: 40px;
+  border-radius: 25px;
+  margin: 20px auto 0;
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 10px;
+  left: auto;
+  transform: none;
+  z-index: 1000;
 }
 
 /* Style the links inside the navigation bar */
@@ -83,9 +115,16 @@ a:has(> .header) {
   color: #000000;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: underline;
+  text-decoration: none;
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transform-origin: center center;
+}
+
+button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  transform-origin: center center;
 }
 
 /*the color of links on hover */
@@ -93,6 +132,13 @@ a:has(> .header) {
   background-color: #b53507a0;
   color: rgb(0, 0, 0);
   cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
 }
 
 /* color of the active/current link */
@@ -102,6 +148,7 @@ a:has(> .header) {
 }
 
 .tagline {
+    grid-column: 1 / 5;
     font-family: 'Courier New', monospace;
     color: #D64D1B;
     margin-top: 20px;
@@ -110,6 +157,8 @@ a:has(> .header) {
 }
 
 .title{
+  grid-column: 1 / 5;
+  position: static;
     font-family: 'Courier New', monospace;
     color: #D64D1B;
     margin-top: 10px;
@@ -119,6 +168,7 @@ a:has(> .header) {
 }
 
 .discovertitle {
+  position: static;
     grid-column: 1 / 5;
     font-family: 'Courier New', monospace;
     color: #D64D1B;
@@ -129,6 +179,7 @@ a:has(> .header) {
 }
 
 .postertitle {
+  position: static;
     grid-column: 1 / 5;
     font-family: 'Courier New', monospace;
     color: #D64D1B;
@@ -139,6 +190,7 @@ a:has(> .header) {
 }
 
 .about {
+  grid-column: 1 / 5;
     font-family: 'Courier New', monospace;
     color: #D64D1B;
     margin-top: 20px;
@@ -150,9 +202,10 @@ a:has(> .header) {
 }
 
 .hero-image {
-    display: block;          
-    margin: 0 auto;          
-    max-width: 50%;         
+  grid-column: 1 / 5;
+  display: block;          
+  margin: 0 auto;          
+  max-width: 50%;         
 }
 
 .random-poster-section {
@@ -173,11 +226,12 @@ a:has(> .header) {
 }
 
 .random-poster-section img {
-    max-height: 60vh;
-    max-width: 80%;
-    object-fit: contain;
+  width: min(420px, 80vw);
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
     box-shadow: 0 8px 24px rgba(0,0,0,0.25);
     border-radius: 4px;
+  background: #ffffff;
 }
 
   #random-poster-link {

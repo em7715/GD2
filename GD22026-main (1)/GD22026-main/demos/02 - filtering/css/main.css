@@ -1,0 +1,23 @@
+img {
+    max-width:100%;
+}
+
+
+.filters {
+    text-align:center;
+    margin:4rem;
+}
+
+.all-albums {
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    grid-column-gap:1em;
+}
+
+img {
+        filter: grayscale(100%)
+    brightness(1.8)
+    contrast(4)
+    hue-rotate(90deg)
+    saturate(6);
+}

@@ -9,13 +9,13 @@
         <link rel="stylesheet" href="postersCSS.css"/>
     </head>
     <body>
+    <div class="container">
+            <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
         <div class="navbar">
             <a href="home.html">Home</a>
             <a class="active" href="posters.html">Posters</a>
             <a href="discover.html">Discover</a>
         </div>
-    <div class="container">
-            <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
 
 <div class="row album-thumbs">
     <div class="column carousel-cell">
@@ -39,11 +39,17 @@ the Chinese version. This demonstrates societal and cultural issues of colourism
             <p id="posterSidebarText">Hover over a poster to see notes here.</p>
         </aside>
 
+        <div class="site-footer"><p>Designed by Emma Burke</p></div>
+
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
         <script>
             $(function () {
-                $('.album-thumbs').flickity({ wrapAround: true, pageDots: false });
+                var $carousel = $('.album-thumbs');
+                if ($carousel.find('.carousel-cell').length === 2) {
+                    $carousel.append($carousel.find('.carousel-cell').slice(0, 2).clone());
+                }
+                $carousel.flickity({ wrapAround: true, pageDots: false });
                 var $sidebar = $('#posterSidebar');
                 var $sidebarTitle = $('#posterSidebarTitle');
                 var $sidebarText = $('#posterSidebarText');

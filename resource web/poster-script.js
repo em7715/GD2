@@ -2,7 +2,12 @@
 $(function () {
   var $grid = $('.grid').isotope({
     itemSelector: '.grid-item',
-    layoutMode: 'fitRows'
+    layoutMode: 'fitRows',
+    getSortData: {
+      title: '[data-title]'
+    },
+    sortBy: 'title',
+    sortAscending: true
   });
 
   $('.film-filters').on('click', 'button', function () {
@@ -10,7 +15,11 @@ $(function () {
     if (!filterValue) {
       return;
     }
-    $grid.isotope({ filter: filterValue });
+    $grid.isotope({
+      filter: filterValue,
+      sortBy: 'title',
+      sortAscending: true
+    });
     $('.film-filters button').removeClass('is-checked');
     $(this).addClass('is-checked');
   });
