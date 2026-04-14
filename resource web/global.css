@@ -62,16 +62,16 @@ a:has(> .header) {
   color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   padding: 0 20px;
   box-sizing: border-box;
-  font-family: 'Do Hyeon', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .site-footer p {
   margin: 0;
-  font-size: 24px;
-  text-align: right;
+  font-size: 16px;
+  text-align: left;
 }
 
 /* .footer {
