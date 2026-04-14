@@ -71,6 +71,7 @@
 
 .filter-parent {
     border: none;
+    color: #ffffff;
     padding: 10px 14px;
     border-radius: 20px;
     cursor: default;
@@ -104,6 +105,7 @@
     padding: 8px 12px;
     font-size: 13px;
     font-family: 'Poppins', sans-serif;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 6px;
 }
@@ -128,6 +130,7 @@
     border-radius: 20px;
     cursor: pointer;
     background: #d64d1b68;
+     color: #ffffff;
     box-sizing: border-box;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
@@ -141,12 +144,14 @@
 
 .film-filters button.is-checked {
     background: #ff4400a0;
+     color: #ffffff;
 }
 
 .film-filters > button:hover,
 .filter-parent:hover,
 .filter-submenu button:hover {
     background: #b53507a0;
+     color: #ffffff;
 }
 
 .film-filters > button,
