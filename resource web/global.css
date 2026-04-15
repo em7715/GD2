@@ -50,6 +50,7 @@ a:has(> .header) {
   margin: 20px;
 } 
 
+
 .site-footer {
   grid-column: 1 / 5;
   position: static;
@@ -62,7 +63,7 @@ a:has(> .header) {
   color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
-  /* justify-content: flex-end; */
+   justify-content: flex-end; 
   padding: 0 20px;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
@@ -71,8 +72,8 @@ a:has(> .header) {
 .site-footer p {
   margin: 0;
   font-size: 16px;
-  text-align: left;
-}
+  text-align: right;
+}  
 
 /* .footer {
   position: static;
