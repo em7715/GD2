@@ -8,16 +8,16 @@
         <link rel="stylesheet" href="postervariations.css"/>
         <link rel="stylesheet" href="postersCSS.css"/>
     </head>
-    <body>
+    <body class="poster-page">
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <div class="container">
-            <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
-        <div class="navbar">
-            <a href="home.html">Home</a>
-            <a class="active" href="posters.html">Posters</a>
-            <a href="discover.html">Discover</a>
-                <button id="accessibility-btn" class="accessibility-btn" aria-label="Open accessibility menu" title="Accessibility Settings">Accessibility</button>
-        </div>
+    <div class="container poster-page-container">
+      <div class="navbar">
+        <a href="home.html">Home</a>
+        <a class="active" href="posters.html">Posters</a>
+        <a href="discover.html">Discover</a>
+        <button id="accessibility-btn" class="accessibility-btn" aria-label="Open accessibility menu" title="Accessibility Settings">Accessibility</button>
+      </div>
+      <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
 
         <div id="accessibility-menu" class="accessibility-menu">
           <button class="close-accessibility-menu" aria-label="Close accessibility menu">×</button>
@@ -41,7 +41,8 @@
           </div>
           
           <div class="accessibility-setting">
-            <button id="text-to-speech-toggle">🔊 Text-to-Speech</button>
+            <button id="text-to-speech-toggle">Text-to-Speech</button>
+                                             
           </div>
           
           <div class="accessibility-setting">
@@ -49,17 +50,13 @@
           </div>
         </div>
 
-<div class="row album-thumbs" id="main-content">
-    <div class="column carousel-cell">
-        <img src="images/OGs/run lola run german.jpg" alt="Run Lola Run German poster" data-sidebar-title="Original (Germany)" data-sidebar-text="The original German poster." style="width:100%">
-    </div>
-    <div class="column carousel-cell">
-        <img src="images/Variants/run lola run us.jpg" alt="Run Lola Run US poster" data-sidebar-title="United States" data-sidebar-text="The US variant." style="width:100%">
-    </div>
-</div>
 
         <div class="movie-title">Run Lola Run (1998), Germany</div>
         <div class="plot">After a botched money delivery, Lola has 20 minutes to come up with 100,000 Deutschmarks to save her boyfriend's life.</div>
+        <div class="side-by-side-images" id="main-content" style="display: flex; flex-direction: row; gap: 0;">
+          <img src="images/OGs/run lola run german.jpg" alt="Run Lola Run German poster" style="width:50%; display:block;">
+          <img src="images/Variants/run lola run us.jpg" alt="Run Lola Run US poster" style="width:50%; display:block;">
+        </div>
         
 
         <aside id="posterSidebar" class="poster-sidebar" aria-live="polite">

@@ -8,16 +8,16 @@
         <link rel="stylesheet" href="postervariations.css"/>
         <link rel="stylesheet" href="postersCSS.css"/>
     </head>
-    <body>
+    <body class="poster-page">
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <div class="container">
-            <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
+    <div class="container poster-page-container">
         <div class="navbar">
             <a href="home.html">Home</a>
             <a class="active" href="posters.html">Posters</a>
             <a href="discover.html">Discover</a>
-                <button id="accessibility-btn" class="accessibility-btn" aria-label="Open accessibility menu" title="Accessibility Settings">Accessibility</button>
+            <button id="accessibility-btn" class="accessibility-btn" aria-label="Open accessibility menu" title="Accessibility Settings">Accessibility</button>
         </div>
+        <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
 
         <div id="accessibility-menu" class="accessibility-menu">
           <button class="close-accessibility-menu" aria-label="Close accessibility menu">×</button>
@@ -41,7 +41,8 @@
           </div>
           
           <div class="accessibility-setting">
-            <button id="text-to-speech-toggle">🔊 Text-to-Speech</button>
+            <button id="text-to-speech-toggle">Text-to-Speech</button>
+                                             
           </div>
           
           <div class="accessibility-setting">
@@ -49,17 +50,14 @@
           </div>
         </div>
 
-<div class="row album-thumbs" id="main-content">
-    <div class="column carousel-cell">
-        <img src="images/OGs/new hope us.jpg" alt="Star Wars: A New Hope US poster" data-sidebar-title="Original (US)" data-sidebar-text="The original US poster." style="width:100%">
-    </div>
-    <div class="column carousel-cell">
-        <img src="images/Variants/new hope russia.jpg" alt="Star Wars: A New Hope Russian poster" data-sidebar-title="Russia" data-sidebar-text="When Russia was a satellite state of Soviet Russia after WWII, Russian artists faced heavy censorship in their creative works, but not with film posters. Thus, their poster designs reflect the politcal and historical context of their time. Russian film posters were sites of experimentation with elements of symbolism, surrealism and abstraction. Often, they didnâ€™t accurately reflect the content of the film, but are still highly visually interesting, engaging and illustrative." style="width:100%">
-    </div>
-</div>
+
 
         <div class="movie-title">Star Wars: A New Hope (1977), US</div>
         <div class="plot"> After the Empire overpowers the Rebel Alliance, Luke Skywalker begins training with Jedi Master Yoda, while Darth Vader and bounty hunter Boba Fett pursue his friends across the galaxy.</div>
+        <div class="side-by-side-images" id="main-content" style="display: flex; flex-direction: row; gap: 0;">
+          <img src="images/OGs/new hope us.jpg" alt="Star Wars: A New Hope US poster" style="width:50%; display:block;">
+          <img src="images/Variants/new hope russia.jpg" alt="Star Wars: A New Hope Russian poster" style="width:50%; display:block;">
+        </div>
 
         <aside id="posterSidebar" class="poster-sidebar" aria-live="polite">
             <h2 id="posterSidebarTitle">Poster details</h2>
@@ -69,26 +67,8 @@
         <div class="site-footer"><p>FILM FOR ALL | Designed by Emma Burke</p></div>
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-        <script>
-            $(function () {
-                var $carousel = $('.album-thumbs');
-                if ($carousel.find('.carousel-cell').length === 2) {
-                    $carousel.append($carousel.find('.carousel-cell').slice(0, 2).clone());
-                }
-                $carousel.flickity({ wrapAround: true, pageDots: false });
-                var $sidebar = $('#posterSidebar');
-                var $sidebarTitle = $('#posterSidebarTitle');
-                var $sidebarText = $('#posterSidebarText');
-                $('.album-thumbs img').on('mouseenter', function () {
-                    $sidebarTitle.text($(this).attr('data-sidebar-title') || 'Poster details');
-                    $sidebarText.text($(this).attr('data-sidebar-text') || '');
-                    $sidebar.addClass('is-visible');
-                });
-                $('.album-thumbs').on('mouseleave', function () { $sidebar.removeClass('is-visible'); });
-                $('.flickity-button').on('mouseenter', function () { $sidebar.removeClass('is-visible'); });
-            });
-        </script>
+        <!-- Flickity carousel script removed -->
+        <!-- Flickity carousel JavaScript removed -->
     <script src="accessibility.js"></script>
     </body>
 </html>

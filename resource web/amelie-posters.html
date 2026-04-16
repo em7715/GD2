@@ -10,18 +10,17 @@
 
         <link rel="stylesheet" href="postersCSS.css"/>
     </head>
-    <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <div class="container">
-            <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
-        <div class="navbar">
-               <a href="home.html">Home</a>
-                <a class="active" href="posters.html">Posters</a>
-                <a href="discover.html">Discover</a>
-               
-                <button id="accessibility-btn" class="accessibility-btn" aria-label="Open accessibility menu" title="Accessibility Settings">Accessibility</button>
-            </div>
+    <body class="poster-page">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="container poster-page-container">
+      <div class="navbar">
+        <a href="home.html">Home</a>
+        <a class="active" href="posters.html">Posters</a>
+        <a href="discover.html">Discover</a>
+        <button id="accessibility-btn" class="accessibility-btn" aria-label="Open accessibility menu" title="Accessibility Settings">Accessibility</button>
+      </div>
+      <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
 
         <div id="accessibility-menu" class="accessibility-menu">
           <button class="close-accessibility-menu" aria-label="Close accessibility menu">×</button>
@@ -45,7 +44,8 @@
           </div>
           
           <div class="accessibility-setting">
-            <button id="text-to-speech-toggle">🔊 Text-to-Speech</button>
+            <button id="text-to-speech-toggle">Text-to-Speech</button>
+                                           
           </div>
           
           <div class="accessibility-setting">
@@ -56,23 +56,14 @@
 
             <!-- <div class="footer"> <p>Designed by Emma Burke  </p> </div> -->
 
-<div class="row album-thumbs" id="main-content">
 
-     <div class="column carousel-cell">
-                <img src="images/OGs/amelie-og.jpg" alt="Amelie's original French poster" data-sidebar-title="Original (France)" data-sidebar-text="The original French poster design." style="width:100%">
-            </div>
-            
-            <div class="column carousel-cell">
-                <img src="images/Variants/amelie-japanese.jpeg" alt="Amelie's Japanese poster" data-sidebar-title="Japan" data-sidebar-text="The Japanese version." style="width:100%">
-            </div>
-
-            <div class="column carousel-cell">
-                <img src="images/Variants/amelie-us.jpeg" alt="Amelie's US poster" data-sidebar-title="United States" data-sidebar-text="The US version." style="width:100%">
-            </div>
-            </div>
-
-            <div class="movie-title">AmÃ©lie (2001), France</div>
+            <div class="movie-title">Amelie (2001), France</div>
                 <div class="plot">Despite being caught in her imaginative world, young waitress Amelie decides to help people find happiness. Her quest to spread joy leads her on a journey during which she finds true love.</div>
+            <div class="side-by-side-images" id="main-content" style="display: flex; flex-direction: row; gap: 0;">
+              <img src="images/OGs/amelie-og.jpg" alt="Amelie's original French poster" style="width:20vw; max-width:20vw; display:block;">
+              <img src="images/Variants/amelie-japanese.jpeg" alt="Amelie's Japanese poster" style="width:20vw; max-width:20vw; display:block;">
+              <img src="images/Variants/amelie-us.jpeg" alt="Amelie's US poster" style="width:20vw; max-width:20vw; display:block;">
+            </div>
                 
 
             <aside id="posterSidebar" class="poster-sidebar" aria-live="polite">
@@ -84,37 +75,7 @@
         <div class="site-footer"><p>Designed by Emma Burke</p></div>
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-        <script>
-            $(function () {
-                var $carousel = $('.album-thumbs');
-                if ($carousel.find('.carousel-cell').length === 2) {
-                    $carousel.append($carousel.find('.carousel-cell').slice(0, 2).clone());
-                }
-                $carousel.flickity({
-                    wrapAround: true,
-                    pageDots: false
-                });
-
-                var $sidebar = $('#posterSidebar');
-                var $sidebarTitle = $('#posterSidebarTitle');
-                var $sidebarText = $('#posterSidebarText');
-
-                $('.album-thumbs img').on('mouseenter', function () {
-                    $sidebarTitle.text($(this).attr('data-sidebar-title') || 'Poster details');
-                    $sidebarText.text($(this).attr('data-sidebar-text') || '');
-                    $sidebar.addClass('is-visible');
-                });
-
-                $('.album-thumbs').on('mouseleave', function () {
-                    $sidebar.removeClass('is-visible');
-                });
-
-                $('.flickity-button').on('mouseenter', function () {
-                    $sidebar.removeClass('is-visible');
-                });
-            });
-        </script>
+        <!-- Flickity carousel JavaScript removed -->
 
     <script src="accessibility.js"></script>
     </body>

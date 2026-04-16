@@ -4,20 +4,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>FILM FOR ALL</title>
         <link rel="stylesheet" href="global.css"/>
-        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"/>
         <link rel="stylesheet" href="postervariations.css"/>
         <link rel="stylesheet" href="postersCSS.css"/>
     </head>
-    <body>
+    <body class="poster-page">
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <div class="container">
-            <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
-        <div class="navbar">
-            <a href="home.html">Home</a>
-            <a class="active" href="posters.html">Posters</a>
-            <a href="discover.html">Discover</a>
-            <button id="accessibility-btn" class="accessibility-btn" aria-label="Open accessibility menu" title="Accessibility Settings">Accessibility</button>
-        </div>
+    <div class="container poster-page-container">
+      <div class="navbar">
+        <a href="home.html">Home</a>
+        <a class="active" href="posters.html">Posters</a>
+        <a href="discover.html">Discover</a>
+        <button id="accessibility-btn" class="accessibility-btn" aria-label="Open accessibility menu" title="Accessibility Settings">Accessibility</button>
+      </div>
+      <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
         
         <div id="accessibility-menu" class="accessibility-menu">
           <button class="close-accessibility-menu" aria-label="Close accessibility menu">×</button>
@@ -41,7 +40,8 @@
           </div>
           
           <div class="accessibility-setting">
-            <button id="text-to-speech-toggle">🔊 Text-to-Speech</button>
+            <button id="text-to-speech-toggle">Text-to-Speech</button>
+                                              
           </div>
           
           <div class="accessibility-setting">
@@ -49,17 +49,13 @@
           </div>
         </div>
 
-<div class="row album-thumbs" id="main-content">
-    <div class="column carousel-cell">
-        <img src="images/OGs/aliens og.jpg" alt="Aliens US poster" data-sidebar-title="Original (US)" data-sidebar-text="The original US poster." style="width:100%">
-    </div>
-    <div class="column carousel-cell">
-        <img src="images/Variants/aliens polish.jpg" alt="Aliens Polish poster" data-sidebar-title="Poland" data-sidebar-text="When Poland was a satellite state of Soviet Russia after WWII, Polish artists faced heavy censorship in their creative works, but not with film posters. Thus, their poster designs reflect the politcal and historical context of their time. Polish film posters were sites of experimentation with elements of symbolism, surrealism and abstraction. Often, they didn’t accurately reflect the content of the film, but are still highly visually interesting, engaging and illustrative." style="width:100%">
-    </div>
-</div>
 
         <div class="movie-title">Aliens (1986), US</div>
-        <div class="plot">Decades after surviving the Nostromo incident, Ellen Ripley is sent out to re-establish contact with a terraforming colony but finds herself battling the Alien Queen and her offspring.</div>
+        <div class="plot">Ellen Ripley is rescued by a deep salvage team after being in hypersleep for 57 years. The moon that the Nostromo visited has been colonized, but contact is lost. This time, colonial marines have more firepower, but will that be enough?</div>
+        <div class="side-by-side-images" id="main-content" style="display: flex; flex-direction: row; gap: 0;">
+          <img src="images/OGs/aliens og.jpg" alt="Aliens OG poster" style="width:50%; display:block;">
+          <img src="images/Variants/aliens polish.jpg" alt="Aliens Polish poster" style="width:50%; display:block;">
+        </div>
 
 
         <aside id="posterSidebar" class="poster-sidebar" aria-live="polite">
@@ -70,7 +66,6 @@
         <div class="site-footer"><p>Designed by Emma Burke</p></div>
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
         <script>
             $(function () {
                 var $carousel = $('.album-thumbs');

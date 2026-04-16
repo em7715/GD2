@@ -8,16 +8,16 @@
         <link rel="stylesheet" href="postervariations.css"/>
         <link rel="stylesheet" href="postersCSS.css"/>
     </head>
-    <body>
+    <body class="poster-page">
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <div class="container">
-            <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
-        <div class="navbar">
-            <a href="home.html">Home</a>
-            <a class="active" href="posters.html">Posters</a>
-            <a href="discover.html">Discover</a>
-                <button id="accessibility-btn" class="accessibility-btn" aria-label="Open accessibility menu" title="Accessibility Settings">Accessibility</button>
-        </div>
+    <div class="container poster-page-container">
+      <div class="navbar">
+        <a href="home.html">Home</a>
+        <a class="active" href="posters.html">Posters</a>
+        <a href="discover.html">Discover</a>
+        <button id="accessibility-btn" class="accessibility-btn" aria-label="Open accessibility menu" title="Accessibility Settings">Accessibility</button>
+      </div>
+      <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
 
         <div id="accessibility-menu" class="accessibility-menu">
           <button class="close-accessibility-menu" aria-label="Close accessibility menu">×</button>
@@ -41,7 +41,8 @@
           </div>
           
           <div class="accessibility-setting">
-            <button id="text-to-speech-toggle">🔊 Text-to-Speech</button>
+            <button id="text-to-speech-toggle">Text-to-Speech</button>
+                                            
           </div>
           
           <div class="accessibility-setting">
@@ -49,17 +50,14 @@
           </div>
         </div>
 
-<div class="row album-thumbs" id="main-content">
-    <div class="column carousel-cell">
-        <img src="images/OGs/fatal attraction og.jpg" alt="Fatal Attraction US poster" data-sidebar-title="Original (US)" data-sidebar-text="The original US poster." style="width:100%">
-    </div>
-    <div class="column carousel-cell">
-        <img src="images/Variants/fatal attraction polish.jpg" alt="Fatal Attraction Polish poster" data-sidebar-title="Poland" data-sidebar-text="When Poland was a satellite state of Soviet Russia after WWII, Polish artists faced heavy censorship in their creative works, but not with film posters. Thus, their poster designs reflect the politcal and historical context of their time. Polish film posters were sites of experimentation with elements of symbolism, surrealism and abstraction. Often, they didnâ€™t accurately reflect the content of the film, but are still highly visually interesting, engaging and illustrative." style="width:100%">
-    </div>
-</div>
+<!-- Image carousel removed as requested -->
 
         <div class="movie-title">Fatal Attraction (1987), US</div>
         <div class="plot">A married man's one-night stand comes back to haunt him when that lover begins to stalk him and his family.</div>
+        <div class="side-by-side-images" id="main-content" style="display: flex; flex-direction: row; gap: 0;">
+          <img src="images/OGs/fatal attraction og.jpg" alt="Fatal Attraction US poster" style="width:50%; display:block;">
+          <img src="images/Variants/fatal attraction polish.jpg" alt="Fatal Attraction Polish poster" style="width:50%; display:block;">
+        </div>
 
         <aside id="posterSidebar" class="poster-sidebar" aria-live="polite">
             <h2 id="posterSidebarTitle">Poster details</h2>
