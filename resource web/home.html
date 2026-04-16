@@ -9,6 +9,7 @@
         <!-- <link rel="stylesheet" href="main2.css"/> -->
     </head>
     <body>
+        <a href="#main-content" class="skip-link">Skip to main content</a>
         <div class="container">
             <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
 
@@ -16,10 +17,40 @@
                 <a class="active" href="home.html">Home</a>
                 <a href="posters.html">Posters</a>
                 <a href="discover.html">Discover</a>
-                
+                <button id="accessibility-btn" class="accessibility-btn" aria-label="Open accessibility menu" title="Accessibility Settings">Accessibility</button>
+            </div>
+            
+            <div id="accessibility-menu" class="accessibility-menu">
+              <button class="close-accessibility-menu" aria-label="Close accessibility menu">×</button>
+              <h2>Accessibility</h2>
+              
+              <div class="accessibility-setting">
+                <label for="font-size-slider">Font Size: <span id="font-size-value">100%</span></label>
+                <input type="range" id="font-size-slider" min="75" max="200" value="100">
+              </div>
+              
+              <div class="accessibility-setting">
+                <button id="text-spacing-toggle">Increase Text Spacing</button>
+              </div>
+              
+              <div class="accessibility-setting">
+                <button id="dark-mode-toggle">Dark Mode</button>
+              </div>
+              
+              <div class="accessibility-setting">
+                <button id="high-contrast-toggle">High Contrast</button>
+              </div>
+              
+              <div class="accessibility-setting">
+                <button id="text-to-speech-toggle">🔊 Text-to-Speech</button>
+              </div>
+              
+              <div class="accessibility-setting">
+                <button id="reset-accessibility">Reset All</button>
+              </div>
             </div>
 
-        <div class="title">
+        <div class="title" id="main-content">
             <h1>Explore film posters from <br> different countries</h1>
         </div>
 
@@ -54,7 +85,7 @@
 
         </div>
 
-
+    <script src="accessibility.js"></script>
     </body>
 </html>
 

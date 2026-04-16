@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="postersCSS.css"/>
     </head>
     <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <div class="container">
             <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
@@ -16,10 +17,40 @@
                <a href="home.html">Home</a>
                 <a class="active" href="posters.html">Posters</a>
                 <a href="discover.html">Discover</a>
-                
+                <button id="accessibility-btn" class="accessibility-btn" aria-label="Open accessibility menu" title="Accessibility Settings">Accessibility</button>
+            </div>
+            
+            <div id="accessibility-menu" class="accessibility-menu">
+              <button class="close-accessibility-menu" aria-label="Close accessibility menu">×</button>
+              <h2>Accessibility</h2>
+              
+              <div class="accessibility-setting">
+                <label for="font-size-slider">Font Size: <span id="font-size-value">100%</span></label>
+                <input type="range" id="font-size-slider" min="75" max="200" value="100">
+              </div>
+              
+              <div class="accessibility-setting">
+                <button id="text-spacing-toggle">Increase Text Spacing</button>
+              </div>
+              
+              <div class="accessibility-setting">
+                <button id="dark-mode-toggle">Dark Mode</button>
+              </div>
+              
+              <div class="accessibility-setting">
+                <button id="high-contrast-toggle">High Contrast</button>
+              </div>
+              
+              <div class="accessibility-setting">
+                <button id="text-to-speech-toggle">🔊 Text-to-Speech</button>
+              </div>
+              
+              <div class="accessibility-setting">
+                <button id="reset-accessibility">Reset All</button>
+              </div>
             </div>
 
-                        <div class="postertitle"><p>Posters</p></div>
+                        <div class="postertitle" id="main-content"><p>Posters</p></div>
 
  
 
@@ -248,5 +279,6 @@
 		<!-- jquery comes first before Isotope and the custom script -->
                <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
               <script src="poster-script.js"></script>
+              <script src="accessibility.js"></script>
     </body>
 </html>

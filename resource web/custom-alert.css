@@ -1,0 +1,40 @@
+/* Custom orange alert for accessibility reset */
+.custom-alert-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.3);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.custom-alert {
+  background: #D64D1B;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25em;
+  padding: 2em 2.5em;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  text-align: center;
+  min-width: 280px;
+}
+.custom-alert button {
+  margin-top: 1.5em;
+  background: #fff;
+  color: #D64D1B;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: background 0.2s, color 0.2s;
+}
+.custom-alert button:hover {
+  background: #ffe3d1;
+  color: #B85C1F;
+}

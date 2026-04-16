@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
     <head>
@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="postersCSS.css"/>
     </head>
     <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <div class="container">
             <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
@@ -19,12 +20,43 @@
                 <a class="active" href="posters.html">Posters</a>
                 <a href="discover.html">Discover</a>
                
+                <button id="accessibility-btn" class="accessibility-btn" aria-label="Open accessibility menu" title="Accessibility Settings">Accessibility</button>
             </div>
+
+        <div id="accessibility-menu" class="accessibility-menu">
+          <button class="close-accessibility-menu" aria-label="Close accessibility menu">×</button>
+          <h2>Accessibility</h2>
+          
+          <div class="accessibility-setting">
+            <label for="font-size-slider">Font Size: <span id="font-size-value">100%</span></label>
+            <input type="range" id="font-size-slider" min="75" max="200" value="100">
+          </div>
+          
+          <div class="accessibility-setting">
+            <button id="text-spacing-toggle">Increase Text Spacing</button>
+          </div>
+          
+          <div class="accessibility-setting">
+            <button id="dark-mode-toggle">Dark Mode</button>
+          </div>
+          
+          <div class="accessibility-setting">
+            <button id="high-contrast-toggle">High Contrast</button>
+          </div>
+          
+          <div class="accessibility-setting">
+            <button id="text-to-speech-toggle">🔊 Text-to-Speech</button>
+          </div>
+          
+          <div class="accessibility-setting">
+            <button id="reset-accessibility">Reset All</button>
+          </div>
+        </div>
  
 
             <!-- <div class="footer"> <p>Designed by Emma Burke  </p> </div> -->
 
-<div class="row album-thumbs">
+<div class="row album-thumbs" id="main-content">
 
      <div class="column carousel-cell">
                 <img src="images/OGs/amelie-og.jpg" alt="Amelie's original French poster" data-sidebar-title="Original (France)" data-sidebar-text="The original French poster design." style="width:100%">
@@ -39,7 +71,7 @@
             </div>
             </div>
 
-            <div class="movie-title">Amélie (2001), France</div>
+            <div class="movie-title">AmÃ©lie (2001), France</div>
                 <div class="plot">Despite being caught in her imaginative world, young waitress Amelie decides to help people find happiness. Her quest to spread joy leads her on a journey during which she finds true love.</div>
                 
 
@@ -84,5 +116,6 @@
             });
         </script>
 
+    <script src="accessibility.js"></script>
     </body>
 </html>
