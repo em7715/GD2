@@ -61,6 +61,7 @@
     color: #D64D1B;
 }
 
+/* info about changes */
 .poster-sidebar {
     grid-column: 4 / 5;
     grid-row: 4;
@@ -69,6 +70,7 @@
     padding: 10px;
     margin-top: 12px;
     margin-left: 10px;
+    font-family: Poppins, sans-serif;
     border-radius: 10px;
     background:  #f19472;
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
