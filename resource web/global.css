@@ -1,19 +1,27 @@
-body.high-contrast .filter-submenu {
-  background-color: #000;
-  color: #FFF;
-  border: 2px solid #FFF;
-}
-/* Ensure side-by-side poster images always fill half the viewport width */
-.side-by-side-images img {
-  width: 25vw !important;
-  max-width: 25vw;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-/* Global CCS style page for all the common elements across pages */
-
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+/* Flickity CSS import removed */
+
+.movie-title, .plot {
+  text-align: left;
+  margin-left: 40px;
+  margin-right: auto;
+  max-width: 900px;
+  font-family: 'Do Hyeon', sans-serif;
+  color: #D64D1B;
+}
+
+.movie-title {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.plot {
+  font-size: 1.25em;
+  margin-bottom: 30px;
+}
+
 
 body {
   margin: 0;
@@ -773,5 +781,61 @@ body.increased-spacing {
 
 .close-accessibility-menu:hover {
   color: #B85C1F;
+}
+
+/* Lightbox modal for enlarged poster images */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+.image-modal.active {
+  display: flex;
+}
+.image-modal img {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 20px;
+  box-shadow: 0 0 40px #000;
+}
+
+/* Carousel arrow button styles for image modal */
+.image-modal .carousel-btn {
+  background: #f19472;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 2.2em;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  opacity: 0.9;
+  z-index: 10001;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.image-modal .carousel-btn:hover {
+  background: #ff4400a0;
+  transform: scale(1.08);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+}
+.image-modal .carousel-btn.prev {
+  left: 32px;
+}
+.image-modal .carousel-btn.next {
+  right: 32px;
 }
 

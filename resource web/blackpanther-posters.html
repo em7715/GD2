@@ -49,7 +49,6 @@
           </div>
         </div>
 
-the original. This could point to societal and cultural issues of colourism and racism." style="width:100%">
 
         <div class="movie-title">Black Panther (2018), US</div>
         <div class="plot">T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.</div>
@@ -57,6 +56,8 @@ the original. This could point to societal and cultural issues of colourism and 
           <img src="images/OGs/black panther OG.jpg" alt="Black Panther OG poster" style="width:50%; display:block;">
           <img src="images/Variants/black panther china.jpg" alt="Black Panther China poster" style="width:50%; display:block;">
         </div>
+        <div class= "caption">The Chinese poster for Black Panther features Black Panther with his face entirely obscured by his mask, unlike in the original.
+            This could point to societal and cultural issues of colourism and racism as it attempts to hide and erase the character's race.</div>
 
         <aside id="posterSidebar" class="poster-sidebar" aria-live="polite">
             <h2 id="posterSidebarTitle">Poster details</h2>
@@ -72,7 +73,7 @@ the original. This could point to societal and cultural issues of colourism and 
                 if ($carousel.find('.carousel-cell').length === 2) {
                     $carousel.append($carousel.find('.carousel-cell').slice(0, 2).clone());
                 }
-                $carousel.flickity({ wrapAround: true, pageDots: false });
+                // Flickity code removed
                 var $sidebar = $('#posterSidebar');
                 var $sidebarTitle = $('#posterSidebarTitle');
                 var $sidebarText = $('#posterSidebarText');
@@ -81,10 +82,9 @@ the original. This could point to societal and cultural issues of colourism and 
                     $sidebarText.text($(this).attr('data-sidebar-text') || '');
                     $sidebar.addClass('is-visible');
                 });
-                $('.album-thumbs').on('mouseleave', function () { $sidebar.removeClass('is-visible'); });
-                $('.flickity-button').on('mouseenter', function () { $sidebar.removeClass('is-visible'); });
-            });
-        </script>
-    <script src="accessibility.js"></script>
-    </body>
-</html>
+              });
+            </script>
+          <script src="accessibility.js"></script>
+          <script src="image-modal.js"></script>
+          </body>
+        </html>
