@@ -1,3 +1,11 @@
+@media (max-width: 700px) {
+    .movie-title,
+    .plot {
+        padding-left: 6vw !important;
+        padding-right: 6vw !important;
+        box-sizing: border-box !important;
+    }
+}
 /* Center movie title and plot block over images, but keep text left-aligned */
 body.poster-page .movie-title,
 body.poster-page .plot {
