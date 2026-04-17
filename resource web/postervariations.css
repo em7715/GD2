@@ -1,3 +1,28 @@
+/* Match caption width to side-by-side images */
+.caption-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+/* Caption matches image width, no box styling */
+.caption {
+    max-width: 680px;
+    width: 100%;
+    color: #222;
+    padding: 0 8px;
+    font-size: 1.08em;
+    text-align: left;
+    background: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+@media (max-width: 900px) {
+    .caption {
+        max-width: 96vw;
+        padding: 12px 4vw;
+    }
+}
 @media (max-width: 700px) {
     .movie-title,
     .plot,

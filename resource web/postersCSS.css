@@ -1,4 +1,79 @@
 @media (max-width: 700px) {
+    .container.poster-page-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+    }
+    .film-filters {
+        position: static !important;
+        width: 98vw !important;
+        max-width: 100vw !important;
+        margin: 0 auto 10px auto !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 4px !important;
+        align-items: center !important;
+        font-size: 0.85em !important;
+        z-index: 1100 !important;
+        justify-content: flex-start !important;
+        order: 1 !important;
+    }
+    .grid {
+        order: 2 !important;
+    }
+    .film-filters button,
+    .film-filters select,
+    .film-filters label {
+        font-size: 0.82em !important;
+        padding: 4px 7px !important;
+        min-height: 28px !important;
+        border-radius: 14px !important;
+        margin-bottom: 2px !important;
+    }
+    .filter-parent {
+        padding: 7px 10px !important;
+        font-size: 0.82em !important;
+        border-radius: 14px !important;
+    }
+    .filter-submenu {
+        min-width: 120px !important;
+        padding: 0 4px !important;
+    }
+    .filter-submenu button {
+        font-size: 0.8em !important;
+        min-height: 24px !important;
+        padding: 4px 7px !important;
+        border-radius: 12px !important;
+    }
+}
+@media (max-width: 700px) {
+    .grid {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin: 0 !important;
+        padding: 0 2vw !important;
+        gap: 12px !important;
+    }
+    .grid-item {
+        min-width: 70vw !important;
+        max-width: 90vw !important;
+        width: 80vw !important;
+        margin: 0 !important;
+        margin-right: 12px !important;
+        margin-top: 0 !important;
+    }
+    .grid-item img {
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 2/3 !important;
+        object-fit: contain !important;
+    }
+}
+@media (max-width: 700px) {
     html, body {
         max-width: 100vw;
         overflow-x: hidden;
@@ -175,6 +250,10 @@
     margin-top: 0;
     z-index: 1100;
     transition: max-height 0.25s ease, opacity 0.2s ease, margin-top 0.2s ease, padding 0.2s ease;
+}
+
+body.high-contrast .filter-submenu {
+    background: #222 !important;
 }
 
 .filter-submenu button {
