@@ -10,51 +10,50 @@
     <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <div class="container">
-            <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
+      <a href="home.html"><div class="header"> <h1>FILM FOR ALL</h1> </div></a>
+      <div class="movie-title">The Shining (1980), US</div>
+      <div class="plot">A family heads to an isolated hotel for the winter, where a sinister presence influences the father into violence. At the same time, his psychic son sees horrifying forebodings from both the past and the future.</div>
         <div class="navbar">
             <a href="home.html">Home</a>
             <a class="active" href="posters.html">Posters</a>
             <a href="discover.html">Discover</a>
-                <button id="accessibility-btn" class="accessibility-btn" aria-label="Open accessibility menu" title="Accessibility Settings">Accessibility</button>
+            <button id="accessibility-btn" class="accessibility-btn" aria-label="Open accessibility menu" title="Accessibility Settings">Accessibility</button>
         </div>
 
         <div id="accessibility-menu" class="accessibility-menu">
           <button class="close-accessibility-menu" aria-label="Close accessibility menu">×</button>
           <h2>Accessibility</h2>
-          
           <div class="accessibility-setting">
             <label for="font-size-slider">Font Size: <span id="font-size-value">100%</span></label>
             <input type="range" id="font-size-slider" min="75" max="200" value="100">
           </div>
-          
           <div class="accessibility-setting">
             <button id="text-spacing-toggle">Increase Text Spacing</button>
           </div>
-          
           <div class="accessibility-setting">
             <button id="dark-mode-toggle">Dark Mode</button>
           </div>
-          
           <div class="accessibility-setting">
             <button id="high-contrast-toggle">High Contrast</button>
           </div>
-          
           <div class="accessibility-setting">
             <button id="text-to-speech-toggle">Text-to-Speech</button>
-                                               
           </div>
-          
           <div class="accessibility-setting">
             <button id="reset-accessibility">Reset All</button>
           </div>
         </div>
 
-  <div class="side-by-side-images" id="main-content" style="display: flex; flex-direction: row; gap: 0;">
-    <img src="images/OGs/the shining us.jpg" alt="The Shining US poster" style="width:50%; display:block;">
-    <img src="images/Variants/the shining poland.jpg" alt="The Shining Polish poster" style="width:50%; display:block;">
-  </div>
-        <div class="movie-title">The Shining (1980), US</div>
-        <div class="plot"> A family heads to an isolated hotel for the winter, where a sinister presence influences the father into violence. At the same time, his psychic son sees horrifying forebodings from both the past and the future.</div>
+        <div class="side-by-side-images" id="main-content">
+          <figure>
+            <img src="images/OGs/the shining us.jpg" alt="The Shining US poster">
+            <figcaption class="poster-caption">United States</figcaption>
+          </figure>
+          <figure>
+            <img src="images/Variants/the shining poland.jpg" alt="The Shining Polish poster">
+            <figcaption class="poster-caption">Poland</figcaption>
+          </figure>
+        </div>
 
         <aside id="posterSidebar" class="poster-sidebar" aria-live="polite">
             <h2 id="posterSidebarTitle">Poster details</h2>

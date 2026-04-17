@@ -1,3 +1,30 @@
+/* Break grid for movie title and plot on The Shining poster page */
+body.poster-page .movie-title,
+body.poster-page .plot {
+    max-width: 800px;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 32px;
+    margin-bottom: 0;
+    display: block;
+    text-align: left;
+    position: relative;
+    z-index: 2;
+}
+/* Center side-by-side images on poster pages */
+.side-by-side-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+.side-by-side-images figure {
+    margin: 0 8px;
+    text-align: center;
+}
 /* Vertical composition for The Shining poster page */
 body.poster-page .movie-title,
 body.poster-page .plot {
@@ -237,4 +264,56 @@ body.poster-page .plot {
     margin: 0;
     line-height: 1.2;
     font-size: 0.8125em;
+}
+
+.poster-caption {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  color: #D64D1B;
+  font-weight: bold;
+  margin-top: 8px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .side-by-side-images img {
+    width: 32vw;
+    max-width: 220px;
+    min-width: 90px;
+  }
+}
+
+@media (max-width: 768px) {
+  .side-by-side-images {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 12px !important;
+  }
+  .side-by-side-images img {
+    width: 80vw;
+    max-width: 95vw;
+    min-width: 0;
+    margin: 0 auto;
+    display: block;
+  }
+  .movie-title, .plot {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    max-width: 98vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .side-by-side-images img {
+    width: 98vw;
+    max-width: 99vw;
+    min-width: 0;
+    margin: 0 auto;
+  }
+  .movie-title, .plot {
+    margin-left: 4vw !important;
+    margin-right: 4vw !important;
+    max-width: 98vw;
+    font-size: 1em;
+  }
 }

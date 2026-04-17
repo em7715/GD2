@@ -56,7 +56,6 @@
     document.querySelectorAll('.side-by-side-images img').forEach(img => {
       img.style.cursor = 'zoom-in';
       img.addEventListener('click', function(e) {
-        console.log('Zoom image clicked:', img.src);
         openZoomModal(img);
       });
     });
