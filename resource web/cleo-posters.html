@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"/>
         <link rel="stylesheet" href="postervariations.css"/>
         <link rel="stylesheet" href="postersCSS.css"/>
+        
     </head>
     <body class="poster-page">
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -67,25 +68,6 @@
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-        <script>
-            $(function () {
-                var $carousel = $('.album-thumbs');
-                if ($carousel.find('.carousel-cell').length === 2) {
-                    $carousel.append($carousel.find('.carousel-cell').slice(0, 2).clone());
-                }
-                $carousel.flickity({ wrapAround: true, pageDots: false });
-                var $sidebar = $('#posterSidebar');
-                var $sidebarTitle = $('#posterSidebarTitle');
-                var $sidebarText = $('#posterSidebarText');
-                $('.album-thumbs img').on('mouseenter', function () {
-                    $sidebarTitle.text($(this).attr('data-sidebar-title') || 'Poster details');
-                    $sidebarText.text($(this).attr('data-sidebar-text') || '');
-                    $sidebar.addClass('is-visible');
-                });
-                $('.album-thumbs').on('mouseleave', function () { $sidebar.removeClass('is-visible'); });
-                $('.flickity-button').on('mouseenter', function () { $sidebar.removeClass('is-visible'); });
-            });
-        </script>
     <script src="accessibility.js"></script>
     <script src="image-modal.js"></script>
     </body>

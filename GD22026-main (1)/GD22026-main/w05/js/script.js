@@ -29,9 +29,6 @@ $(document).scroll(function(){
 2. toggle the class "active" on the #menu element
 */
 
-$(".album-thumbs").flickity({
-    wrapAround: true
-})
 
 /* 
 

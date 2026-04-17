@@ -33,7 +33,3 @@ $(".header-left").click(function(){
 
 // })
 
-$(".album-thumbs").flickity({
-    wrapAround: true,
-    pageDots: false
-})

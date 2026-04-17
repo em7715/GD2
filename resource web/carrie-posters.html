@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="global.css"/>
         <link rel="stylesheet" href="postervariations.css"/>
         <link rel="stylesheet" href="postersCSS.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"/>
     </head>
     <body class="poster-page">
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -53,8 +54,8 @@
         <div class="movie-title">Carrie (1976), US</div>
         <div class="plot"> Carrie White, a shy, friendless teenage girl who is sheltered by her domineering, religious mother, unleashes her telekinetic powers after being humiliated by her classmates at her senior prom.</div>
         <div class="side-by-side-images" id="main-content" style="display: flex; flex-direction: row; gap: 0;">
-          <img src="images/OGs/carrie us.jpg" alt="Carrie US poster" style="width:50%; display:block;">
-          <img src="images/Variants/carrie france.jpg" alt="Carrie French poster" style="width:50%; display:block;">
+          <img src="images/OGs/carrie us.jpg" alt="Carrie US poster">
+          <img src="images/Variants/carrie france.jpg" alt="Carrie French poster">
         </div>
 
         <aside id="posterSidebar" class="poster-sidebar" aria-live="polite">
@@ -65,22 +66,8 @@
         <div class="site-footer"><p>Designed by Emma Burke</p></div>
 
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script>
-            $(function () {
-                var $carousel = $('.album-thumbs');
-                if ($carousel.find('.carousel-cell').length === 2) {
-                    $carousel.append($carousel.find('.carousel-cell').slice(0, 2).clone());
-                }
-                $carousel.flickity({ wrapAround: true, pageDots: false });
-                var $sidebar = $('#posterSidebar');
-                var $sidebarTitle = $('#posterSidebarTitle');
-                var $sidebarText = $('#posterSidebarText');
-                $('.album-thumbs img').on('mouseenter', function () {
-                  $sidebarTitle.text($(this).attr('data-sidebar-title') || 'Poster details');
-                });
-              });
-            </script>
-            <script src="accessibility.js"></script>
-            <script src="image-modal.js"></script>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+        <script src="accessibility.js"></script>
+        <script src="image-modal.js"></script>
     </body>
 </html>

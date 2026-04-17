@@ -25,11 +25,6 @@ $(function () {
   });
 });
 
-// Flickity carousel
-$(".album-thumbs").flickity({
-    wrapAround: true,
-    pageDots: false
-})
 
 
 
