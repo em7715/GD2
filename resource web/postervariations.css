@@ -1,5 +1,15 @@
 @media (max-width: 700px) {
     .movie-title,
+    .plot,
+    .poster-caption {
+        padding-left: 6vw !important;
+        padding-right: 6vw !important;
+        box-sizing: border-box !important;
+        word-break: break-word;
+    }
+}
+@media (max-width: 700px) {
+    .movie-title,
     .plot {
         padding-left: 6vw !important;
         padding-right: 6vw !important;
